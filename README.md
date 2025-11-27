@@ -13,6 +13,7 @@ Credits to [neotest-vitest](https://github.com/marilari88/neotest-vitest)
 The adapter will only activate for projects that have `tsx --test` configured in their `package.json` scripts. This ensures the adapter only runs when the project is properly set up to use tsx for testing.
 
 Example `package.json`:
+
 ```json
 {
   "scripts": {
@@ -33,7 +34,7 @@ Example `package.json`:
   "nvim-neotest/neotest",
   dependencies = {
     ...,
-    "your-username/neotest-tsx",
+    "joseederangojr/neotest-tsx",
   },
   config = function()
     require("neotest").setup({
@@ -52,7 +53,7 @@ Example `package.json`:
 {
   "nvim-neotest/neotest",
   dependencies = {
-    "your-username/neotest-tsx",
+    "joseederangojr/neotest-tsx",
   },
   opts = {
     adapters = {
@@ -69,7 +70,7 @@ use({
   "nvim-neotest/neotest",
   requires = {
     ...,
-    "your-username/neotest-tsx",
+    "joseederangojr/neotest-tsx",
   }
   config = function()
     require("neotest").setup({
@@ -96,7 +97,7 @@ Make sure you have Treesitter installed with the right language parser installed
   "nvim-neotest/neotest",
   dependencies = {
     ...,
-    "your-username/neotest-tsx",
+    "joseederangojr/neotest-tsx",
   },
   config = function()
     require("neotest").setup({
@@ -188,6 +189,7 @@ npx tsx tests/basic.test.ts
 ```
 
 These test files demonstrate various patterns that the adapter should handle:
+
 - Basic synchronous and async tests
 - Nested `describe` blocks
 - Different file naming conventions (`.test.ts`, `.spec.ts`)
@@ -214,6 +216,7 @@ nvim -c "source test_adapter.vim"
 ```
 
 **Test Coverage Metrics:**
+
 - **6/6 test suites** passing (100.0% success rate)
 - **634 lines** of code across 2 files
 - **68+ functions** and code paths tested
@@ -227,4 +230,5 @@ Please raise a PR if you are interested in adding new functionality or fixing an
 
 ## Bug Reports
 
-Please file any bug reports and I *might* take a look if time permits otherwise please submit a PR, this plugin is intended to be by the community for the community.
+Please file any bug reports and I _might_ take a look if time permits otherwise please submit a PR, this plugin is intended to be by the community for the community.
+
