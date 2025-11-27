@@ -1,0 +1,14 @@
+{
+  "name": "neotest-tsx-tests",
+  "version": "1.0.0",
+  "description": "Test files for neotest-tsx adapter",
+  "type": "module",
+  "scripts": {
+    "test": "tsx --test",
+    "test:watch": "tsx --test --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0"
+  }
+}
