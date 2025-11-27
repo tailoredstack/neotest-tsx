@@ -210,8 +210,9 @@ end
 -- Node:test outputs TAP format or JSON if configured
 -- For simplicity, we'll assume JSON output similar to vitest
 function M.get_reporter_path()
-  local cwd = vim.fn.getcwd()
-  local path = cwd .. "/lua/javascript/neotest-reporter.mjs"
+  local current_file = debug.getinfo(1, 'S').source:sub(2)
+  local lua_dir = vim.fn.fnamemodify(current_file, ':h:h')
+  local path = lua_dir .. '/javascript/neotest-reporter.mjs'
   if vim.fn.filereadable(path) == 1 then
     return path
   end
